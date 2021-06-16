@@ -4,7 +4,9 @@
   "description": "Demo project used for a team training",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.config.prod.js",
+    "build-dev": "webpack --config webpack.config.dev.js",
+    "start": "webpack-dev-server --config webpack.config.dev.js --open"
   },
   "keywords": [
     "webpack"
@@ -12,7 +14,15 @@
   "author": "Tyler Hawkins",
   "license": "ISC",
   "devDependencies": {
+    "clean": "^4.0.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^5.2.6",
+    "html-webpack-plugin": "^4.5.2",
+    "style-loader": "^2.0.0",
     "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0",
+    "webpack-plugin": "^1.0.5"
   }
 }
